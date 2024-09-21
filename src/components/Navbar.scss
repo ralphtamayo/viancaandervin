@@ -1,0 +1,25 @@
+@import "../styles/utilities/variables.scss";
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  a {
+    font-size: 18px;
+    font-weight: 400;
+    color: $secondary-color;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+
+    &.active,
+    &:hover {
+      border-bottom: 2px solid $secondary-color;
+    }
+
+    &:hover {
+      transition: border-bottom 0.5s ease-in-out;
+    }
+  }
+}

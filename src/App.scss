@@ -1,0 +1,30 @@
+@import "./styles/normalize.css";
+@import "./styles/skeleton.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+
+@import "./styles/utilities/variables.scss";
+
+body {
+  background: $primary-color;
+  font-family: "Quattrocento";
+  color: $secondary-color;
+}
+
+.header-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.primary-button {
+  background-color: $tertiary-color;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  width: 300px;
+
+  &:hover {
+    background-color: #592C22;
+    color: #FFFFFF;
+  }
+}

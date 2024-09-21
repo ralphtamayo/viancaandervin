@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
+import Navbar from "./components/Navbar";
+
+import { Outlet, Route, Routes } from "react-router-dom";
+import VenuePage from "./pages/VenuePage";
+import HomePage from "./pages/HomePage";
+import RsvpPage from "./pages/RsvpPage";
+import DressPage from "./pages/DressPage";
+import RegistryPage from "./pages/RegistryPage";
+import FaqPage from "./pages/FaqsPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <div className="row">
+        <div className="twelve column">
+          <h1 className="header-text">We Do</h1>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="row">
+        <div className="twelve column">
+          <Navbar />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className="row">
+        <div className="twleve columns">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="venue" element={<VenuePage />} />
+            <Route path="rsvp" element={<RsvpPage />} />
+            <Route path="dress" element={<DressPage />} />
+            <Route path="registry" element={<RegistryPage />} />
+            <Route path="faq" element={<FaqPage />} />
+          </Routes>
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
