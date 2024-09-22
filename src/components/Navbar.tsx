@@ -28,9 +28,9 @@ function Navbar() {
       <Link to="registry" className={isActive("/registry") ? "active" : ""}>
         Registry
       </Link>
-      <Link to="faq" className={isActive("/faq") ? "active" : ""}>
+      {/* <Link to="faq" className={isActive("/faq") ? "active" : ""}>
         FAQs
-      </Link>
+      </Link> */}
     </div>
   );
 }

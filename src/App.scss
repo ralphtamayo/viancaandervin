@@ -5,6 +5,11 @@
 
 @import "./styles/utilities/variables.scss";
 
+@font-face {
+  font-family: 'plumrose';
+  src: url('/plumrose.otf');
+}
+
 body {
   background: $primary-color;
   font-family: "Quattrocento";
@@ -16,8 +21,11 @@ body {
 }
 
 .header-text {
+  font-family: "plumrose";
+  font-size: 75px;
   text-align: center;
-  margin-top: 20px;
+  margin: 0;
+  padding-top: 20px;
 }
 
 .primary-button {
@@ -30,5 +38,39 @@ body {
   &:hover {
     background-color: #592C22;
     color: #FFFFFF;
+  }
+}
+
+.flowers {
+  display: block;
+  position: absolute;
+  z-index: -999;
+
+  &.top-flowers {
+    margin: auto;
+    top: 150px;
+    left: 0;
+    right: 0;
+  }
+
+  &.bottom-flowers {
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+  }
+
+  
+  @media only screen and (max-width: 768px) {
+    &.top-flowers {
+      width: 100%;
+      top: 130px;
+    }
+
+    &.bottom-flowers {
+      width: 300%;
+    }
   }
 }

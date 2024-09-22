@@ -12,6 +12,7 @@ import FaqPage from "./pages/FaqsPage";
 function App() {
   return (
     <div>
+      <img src="/top-flowers.png" className="flowers top-flowers" />
       <div className="row">
         <div className="twelve column header-container">
           <h1 className="header-text">We Do</h1>
@@ -32,9 +33,11 @@ function App() {
             <Route path="registry" element={<RegistryPage />} />
             <Route path="faq" element={<FaqPage />} />
           </Routes>
+
           <Outlet />
         </div>
       </div>
+      <img src="/bottom-flowers.png" className="flowers bottom-flowers" />
     </div>
   );
 }
