@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const Countdown = () => {
-  const calculateTimeLeft = () => {
+  const calculateTimeLeft = useCallback(() => {
     const difference = +new Date("June 12, 2025") - +new Date();
     let timeLeft = {};
     if (difference > 0) {
@@ -14,7 +14,7 @@ const Countdown = () => {
     }
 
     return timeLeft;
-  };
+  }, []);
 
   const [timeLeft, setTimeLeft] = useState<any>(calculateTimeLeft());
 
@@ -27,16 +27,12 @@ const Countdown = () => {
 
   Object.keys(timeLeft).forEach((interval) => {
     timerComponents.push(
-      <span key={interval} style={{ marginRight: "10px", fontSize: "18px" }}>
+      <span key={interval} style={{ marginRight: "8px", fontSize: "17px" }}>
         {timeLeft[interval] === 0 ? "1" : timeLeft[interval]} {interval}
       </span>
     );
   });
 
-  return (
-    <div style={{ marginBottom: "20px" }}>
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-    </div>
-  );
+  return <div style={{ marginBottom: "20px" }}>{timerComponents}</div>;
 };
 export default Countdown;
