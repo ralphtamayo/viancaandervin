@@ -1,0 +1,29 @@
+.rsvp-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+
+  .rsvp-desc {
+    width: 100%;
+    margin: auto;
+  }
+
+  .rsvp-form {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #EBDAC8;
+    border-radius: 20px;
+  }
+
+  @media only screen and (max-width: 1180px) {
+    .rsvp-desc {
+      width: 100%;
+    }
+
+    .rsvp-form {
+      width: 90%;
+    }
+  }
+}

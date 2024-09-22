@@ -11,7 +11,7 @@ import FaqPage from "./pages/FaqsPage";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <img src="/top-flowers.png" className="flowers top-flowers" />
       <div className="row">
         <div className="twelve column header-container">
@@ -37,7 +37,7 @@ function App() {
           <Outlet />
         </div>
       </div>
-      <img src="/bottom-flowers.png" className="flowers bottom-flowers" />
+      {/* <img src="/bottom-flowers.png" className="flowers bottom-flowers" /> */}
     </div>
   );
 }
