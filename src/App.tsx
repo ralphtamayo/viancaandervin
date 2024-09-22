@@ -11,9 +11,9 @@ import FaqPage from "./pages/FaqsPage";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <div className="row">
-        <div className="twelve column">
+        <div className="twelve column header-container">
           <h1 className="header-text">We Do</h1>
         </div>
       </div>

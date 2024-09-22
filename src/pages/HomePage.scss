@@ -1,0 +1,36 @@
+.homepage-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  overflow-y: hidden;
+}
+
+.flower {
+  display: block;
+  position: absolute;
+  z-index: -999;
+
+  &.flower1 {
+    height: 40%;
+    top: 4vh;
+    left: 0%;
+  }
+
+  &.flower2 {
+    height: 40%;
+    top: 15vh;
+    right: 0;
+  }
+
+  &.flower3 {
+    height: 40%;
+    top: 55vh;
+    left: 0;
+  }
+
+  &.flower4 {
+    height: 40%;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -27,17 +27,14 @@ const Countdown = () => {
 
   Object.keys(timeLeft).forEach((interval) => {
     timerComponents.push(
-      <span key={interval}>
-        <span style={{ marginRight: "10px" }}>
-          {timeLeft[interval] === 0 ? "1" : timeLeft[interval]}
-        </span>
-        <span style={{ marginRight: "30px" }}>{interval}</span>
+      <span key={interval} style={{ marginRight: "10px", fontSize: "18px" }}>
+        {timeLeft[interval] === 0 ? "1" : timeLeft[interval]} {interval}
       </span>
     );
   });
 
   return (
-    <div>
+    <div style={{ marginBottom: "20px" }}>
       {timerComponents.length ? timerComponents : <span>Time's up!</span>}
     </div>
   );
