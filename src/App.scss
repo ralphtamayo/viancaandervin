@@ -13,6 +13,7 @@
 body {
   background: $primary-color;
   font-family: "Quattrocento";
+  font-size: 1.8em;
   color: $secondary-color;
   height: 100vh;
 
@@ -75,5 +76,31 @@ body {
   body {
     background-position: center bottom;
     background-size: 300%;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+.rotor-group {
+  z-index: -1;
+  .rotor-group-heading {
+    &::before {
+      color: $secondary-color !important;
+    }
+  }
+
+  .rotor {
+    background-color: $secondary-color !important;
+
+    .rotor-leaf-rear,
+    .rotor-leaf-front,
+    .rotor-top,
+    .rotor-bottom {
+      background-color: $secondary-color !important;
+    }
   }
 }

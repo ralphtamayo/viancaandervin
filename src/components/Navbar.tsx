@@ -35,6 +35,9 @@ function Navbar() {
           <Link to="dress" className={isActive("/dress") ? "active" : ""}>
             Dress Code
           </Link>
+          <Link to="order" className={isActive("/order") ? "active" : ""}>
+            Order of the day
+          </Link>
           <Link to="registry" className={isActive("/registry") ? "active" : ""}>
             Registry
           </Link>
@@ -83,6 +86,13 @@ function Navbar() {
               onClick={handleToggleOverlay}
             >
               Dress Code
+            </Link>
+            <Link
+              to="order"
+              className={isActive("/order") ? "active" : ""}
+              onClick={handleToggleOverlay}
+            >
+              Order of the day
             </Link>
             <Link
               to="registry"

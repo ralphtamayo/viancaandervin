@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
-import CountdownTimer from "../components/Countdown";
 
 import "./HomePage.scss";
+import "flipdown";
+
+import { useEffect } from "react";
 
 function HomePage() {
+  useEffect(() => {
+    const unixDate = Math.floor(new Date("June 12, 2025").getTime() / 1000);
+    // @ts-expect-error: FlipDown has no esmodule
+    new FlipDown(unixDate).start();
+  }, []);
+
   return (
     <div className="homepage-container">
       <div>
@@ -14,7 +22,18 @@ function HomePage() {
       <div>
         <h3 style={{ letterSpacing: "4px" }}>JUNE 12, 2025</h3>
         <h4>ABBAZIA SAN PIETRO IN VALLE, FERENTILLO, ITALY</h4>
-        <CountdownTimer />
+        {/* <CountdownTimer /> */}
+        <div
+          id="flipdown"
+          className="flipdown"
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            margin: "40px 0px",
+            zIndex: -999,
+          }}
+        ></div>
 
         <Link to="rsvp">
           <button className="primary-button">RSVP</button>

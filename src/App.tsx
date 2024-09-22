@@ -8,6 +8,7 @@ import RsvpPage from "./pages/RsvpPage";
 import DressPage from "./pages/DressPage";
 import RegistryPage from "./pages/RegistryPage";
 import FaqPage from "./pages/FaqsPage";
+import OrderOfTheDayPage from "./pages/OrderOfTheDayPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="venue" element={<VenuePage />} />
             <Route path="rsvp" element={<RsvpPage />} />
             <Route path="dress" element={<DressPage />} />
+            <Route path="order" element={<OrderOfTheDayPage />} />
             <Route path="registry" element={<RegistryPage />} />
             <Route path="faq" element={<FaqPage />} />
           </Routes>
