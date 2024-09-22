@@ -14,11 +14,6 @@ function App() {
     <div className="container">
       <img src="/top-flowers.png" className="flowers top-flowers" />
       <div className="row">
-        <div className="twelve column header-container">
-          <h1 className="header-text">We Do</h1>
-        </div>
-      </div>
-      <div className="row">
         <div className="twelve column">
           <Navbar />
         </div>

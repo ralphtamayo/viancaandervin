@@ -22,18 +22,6 @@ body {
   background-size: 100%;
 }
 
-.header-container {
-  background-color: $primary-color;
-}
-
-.header-text {
-  font-family: "plumrose";
-  font-size: 75px;
-  text-align: center;
-  margin: 0;
-  padding-top: 20px;
-}
-
 .primary-button {
   background-color: $tertiary-color;
   color: #FFFFFF;
@@ -68,20 +56,10 @@ body {
     max-width: 100%;
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1180px) {
     &.top-flowers {
       width: 100%;
-      top: 130px;
-    }
-
-    &.bottom-flowers {
-      width: 300%;
-    }
-  }
-
-  @media only screen and (max-width: 480px) {
-    &.top-flowers {
-      top: 160px;
+      top: 60px;
     }
   }
 }

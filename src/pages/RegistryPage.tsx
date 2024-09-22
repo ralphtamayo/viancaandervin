@@ -1,5 +1,5 @@
 function RegistryPage() {
-  return <>Registry</>;
+  return <></>;
 }
 
 export default RegistryPage;

@@ -1,5 +1,5 @@
 function FaqsPage() {
-  return <>FAQs</>;
+  return <></>;
 }
 
 export default FaqsPage;

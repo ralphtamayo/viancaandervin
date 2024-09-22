@@ -1,28 +1,117 @@
 @import "../styles/utilities/variables.scss";
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 20px;
   border-bottom: 1px solid $secondary-color;
   background-color: $primary-color;
 
-  a {
-    font-size: 18px;
-    font-weight: 400;
-    color: $secondary-color;
-    text-decoration: none;
-    border-bottom: 3px solid transparent;
+  .header-text {
+    font-family: "plumrose";
+    font-size: 75px;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+  }
 
-    &.active,
-    &:hover {
-      border-bottom: 2px solid $secondary-color;
+  .navbar-large {
+    padding-bottom: 20px;
+
+    .header-text {
+      display: block;
     }
 
-    &:hover {
-      transition: border-bottom 0.5s ease-in-out;
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      a {
+        font-size: 18px;
+        font-weight: 400;
+        color: $secondary-color;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+  
+        &.active,
+        &:hover {
+          border-bottom: 2px solid $secondary-color;
+        }
+  
+        &:hover {
+          transition: border-bottom 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .navbar-small {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: $primary-color;
+    width: 100%;
+    gap: 30px;
+    left: 0;
+
+    .navbar-small-header {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .navbar-hamburger {
+      margin-left: auto;
+    }
+
+    #overlay {
+      position: fixed; /* Sit on top of the page content */
+      // display: none; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 60px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+      z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      cursor: pointer; /* Add a pointer on hover */
+      padding-top: 20px;
+    }
+
+    .navbar-hamburger-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      a {
+        font-size: 30px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+  
+        &.active,
+        &:hover {
+          border-bottom: 2px solid #FFFFFF;
+        }
+
+        &:hover {
+          transition: border-bottom 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1180px) {
+    .navbar-small {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1180px) {
+    .navbar-large {
+      display: none;
     }
   }
 }
