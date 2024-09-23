@@ -11,6 +11,7 @@ function RsvpPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [decision, setDecision] = useState("");
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -25,7 +26,7 @@ function RsvpPage() {
       return;
     }
 
-    const rsvpResponse = await createRsvp({ firstName, lastName });
+    const rsvpResponse = await createRsvp({ firstName, lastName, decision });
     const status = rsvpResponse?.data?.status;
 
     if (status === "success") {
@@ -41,7 +42,7 @@ function RsvpPage() {
         "An issue was encountered during your RSVP. Please try again."
       );
     }
-  }, [createRsvp, firstName, lastName]);
+  }, [createRsvp, firstName, lastName, decision]);
 
   return (
     <div className="rsvp-container">
@@ -65,7 +66,9 @@ function RsvpPage() {
           <>
             <Spinner />
             <p style={{ margin: 0 }}>
-              Thanks for RSVPing! We're saving your spot...
+              {decision === "Accept"
+                ? "Thanks for RSVPing! We're saving your spot..."
+                : "Thank you for letting us know! Processing your RSVP..."}
             </p>
           </>
         ) : (
@@ -99,6 +102,39 @@ function RsvpPage() {
                   onChange={(evt) => setLastName(evt.target.value)}
                 />
               </div>
+              <div className="twelve columns" style={{ marginTop: "20px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "20px",
+                  }}
+                >
+                  <label>
+                    <input
+                      type="radio"
+                      id="accept"
+                      name="decision"
+                      value="Accept"
+                      onChange={(e) => setDecision(e.target.value)}
+                      checked={decision === "Accept"}
+                    />
+                    <span> Accepts Gladly</span>
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      id="decline"
+                      name="decision"
+                      value="Decline"
+                      onChange={(e) => setDecision(e.target.value)}
+                      checked={decision === "Decline"}
+                    />
+                    <span> Declines Regretfully</span>
+                  </label>
+                </div>
+              </div>
+              <label className="example-send-yourself-copy"></label>
               <div className="twelve columns" style={{ marginTop: "20px" }}>
                 <button className="primary-button" onClick={handleSubmit}>
                   Submit
