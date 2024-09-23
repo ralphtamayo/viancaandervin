@@ -11,7 +11,7 @@ function RsvpPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [decision, setDecision] = useState(null);
+  const [decision, setDecision] = useState("");
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
