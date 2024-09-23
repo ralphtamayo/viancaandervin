@@ -11,16 +11,18 @@ function RsvpPage() {
   const [isOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [decision, setDecision] = useState("");
+  const [decision, setDecision] = useState(null);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const [createRsvp, { isLoading }] = useCreateRsvpMutation();
 
   const handleSubmit = useCallback(async () => {
-    if (!firstName || !lastName) {
+    if (!firstName || !lastName || !decision) {
       setHasError(true);
-      setErrorMessage("Please input your complete name.");
+      setErrorMessage(
+        "Oops! Please make sure all fields are filled out before submitting."
+      );
       setIsOpen(true);
 
       return;
