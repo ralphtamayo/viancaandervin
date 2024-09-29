@@ -15,9 +15,11 @@ function HomePage() {
   return (
     <div className="homepage-container">
       <div>
-        <h1 style={{ fontSize: "5em" }}>VIANCA</h1>
-        <h1 style={{ fontSize: "5em" }}>&</h1>
-        <h1 style={{ fontSize: "5em" }}>ERVIN</h1>
+        <h1 className="homepage-names" style={{ marginBottom: "-50px" }}>
+          Vianca
+        </h1>
+        <h1 style={{ fontSize: "3em" }}>&</h1>
+        <h1 className="homepage-names">Ervin</h1>
       </div>
       <div>
         <h3 style={{ letterSpacing: "4px" }}>JUNE 12, 2025</h3>
