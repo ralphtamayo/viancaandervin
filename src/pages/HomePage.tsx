@@ -22,8 +22,8 @@ function HomePage() {
         <h1 className="homepage-names">Ervin</h1>
       </div>
       <div>
-        <h3 style={{ letterSpacing: "4px" }}>JUNE 12, 2025</h3>
-        <h4>ABBAZIA SAN PIETRO IN VALLE, FERENTILLO, ITALY</h4>
+        <h3 style={{ letterSpacing: "4px" }}>June 12, 2025</h3>
+        <h4>Abbazia San Pietro In Valle, Ferentillo, Italy</h4>
         {/* <CountdownTimer /> */}
         <div
           id="flipdown"

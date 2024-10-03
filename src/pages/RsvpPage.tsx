@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useCreateRsvpMutation } from "../redux/rsvp.service";
 import Modal from "react-modal";
 
@@ -15,7 +15,7 @@ function RsvpPage() {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const [createRsvp, { isLoading }] = useCreateRsvpMutation();
+  const [createRsvp, { isLoading, isError }] = useCreateRsvpMutation();
 
   const handleSubmit = useCallback(async () => {
     if (!firstName || !lastName || !decision) {
@@ -43,8 +43,19 @@ function RsvpPage() {
       setErrorMessage(
         "An issue was encountered during your RSVP. Please try again."
       );
+      setIsOpen(true);
     }
   }, [createRsvp, firstName, lastName, decision]);
+
+  useEffect(() => {
+    if (isError) {
+      setHasError(true);
+      setIsOpen(true);
+      setErrorMessage(
+        "An issue was encountered during your RSVP. Please try again."
+      );
+    }
+  }, [isError]);
 
   return (
     <div className="rsvp-container">
@@ -157,7 +168,7 @@ function RsvpPage() {
             bottom: "auto",
             marginRight: "-50%",
             transform: "translate(-50%, -50%)",
-            background: "#FAE7D3",
+            background: "#F2F0EF",
           },
         }}
       >

@@ -12,30 +12,32 @@ import OrderOfTheDayPage from "./pages/OrderOfTheDayPage";
 
 function App() {
   return (
-    <div className="container">
-      <img src="/top-flowers.png" className="flowers top-flowers" />
-      <div className="row">
-        <div className="twelve column">
-          <Navbar />
+    <>
+      <div className="container">
+        <img src="/top-flowers.png" className="flowers top-flowers" />
+        <div className="row">
+          <div className="twelve column">
+            <Navbar />
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="twleve columns">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="venue" element={<VenuePage />} />
-            <Route path="rsvp" element={<RsvpPage />} />
-            <Route path="dress" element={<DressPage />} />
-            <Route path="order" element={<OrderOfTheDayPage />} />
-            <Route path="registry" element={<RegistryPage />} />
-            <Route path="faq" element={<FaqPage />} />
-          </Routes>
+        <div className="row">
+          <div className="twleve columns">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="venue" element={<VenuePage />} />
+              <Route path="rsvp" element={<RsvpPage />} />
+              <Route path="dress" element={<DressPage />} />
+              <Route path="order" element={<OrderOfTheDayPage />} />
+              <Route path="registry" element={<RegistryPage />} />
+              <Route path="faq" element={<FaqPage />} />
+            </Routes>
 
-          <Outlet />
+            <Outlet />
+          </div>
         </div>
+        {/* <img src="/bottom-flowers.png" className="flowers bottom-flowers" /> */}
       </div>
-      {/* <img src="/bottom-flowers.png" className="flowers bottom-flowers" /> */}
-    </div>
+    </>
   );
 }
 

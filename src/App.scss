@@ -19,7 +19,7 @@ body {
 
   background-image: url("/bottom-flowers.png");
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position: bottom -14em left;
   background-size: 100%;
 }
 
@@ -43,9 +43,9 @@ body {
 
   &.top-flowers {
     margin: auto;
-    top: 150px;
     left: 0;
     right: 0;
+    width: 100%;
   }
 
   &.bottom-flowers {
@@ -56,11 +56,16 @@ body {
     right: 0;
     max-width: 100%;
   }
-  
+
   @media only screen and (max-width: 1180px) {
     &.top-flowers {
-      width: 100%;
-      top: 60px;
+      top: -7em;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    &.top-flowers {
+      top: 0;
     }
   }
 }
@@ -83,6 +88,10 @@ body {
   .container {
     width: 100% !important;
   }
+}
+
+.flipdown {
+  font-family: "Quattrocento" !important;
 }
 
 .rotor-group {
