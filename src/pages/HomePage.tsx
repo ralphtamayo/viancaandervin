@@ -19,7 +19,9 @@ function HomePage() {
           Vianca
         </h1>
         <h1 style={{ fontSize: "3em" }}>&</h1>
-        <h1 className="homepage-names">Ervin</h1>
+        <h1 className="homepage-names" style={{ marginBottom: "-35px" }}>
+          Ervin
+        </h1>
       </div>
       <div>
         <h3 style={{ letterSpacing: "4px" }}>June 12, 2025</h3>
