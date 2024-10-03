@@ -171,17 +171,17 @@ body {
 
 @media only screen and (max-width: 1180px) {
   body {
-    background-position: center bottom;
+    background-position: bottom -1em left;
     background-size: 200%;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  body {
-    background-position: center bottom;
-    background-size: 300%;
-  }
-}
+// @media only screen and (max-width: 480px) {
+//   body {
+//     background-position: bottom -1em left;
+//     background-size: 300%;
+//   }
+// }
 
 @media only screen and (min-width: 400px) {
   .container {
