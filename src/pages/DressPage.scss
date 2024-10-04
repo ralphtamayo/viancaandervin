@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 1180px) {
+  body {
+    background-position-x: 100%, -5%, 103%;
+    background-position-y: 105%, 50vh, 25vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-position-y: 105%, 55vh, 20vh;
+  }
+}

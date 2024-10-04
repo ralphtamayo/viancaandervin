@@ -1,9 +1,27 @@
-import "./VenuePage.scss";
+import { GlassMagnifier, MagnifierContainer } from "react-image-magnifiers";
 
-function VenuePage() {
+import "./VenuePage.scss";
+import useWindowDimensions from "../hooks/useWindowDimensions";
+
+function VenuePage({ isOverlayDisplayed }: { isOverlayDisplayed: boolean }) {
+  const { width } = useWindowDimensions();
+
   return (
     <div className="venue-container">
-      <img src="/venue.png" className="venue-map" />
+      <MagnifierContainer autoInPlace={true}>
+        <GlassMagnifier
+          className="input-position"
+          imageSrc="/venue.png"
+          largeImageSrc={width < 480 ? "/venue-large.png" : "/venue-large2.png"}
+          allowOverflow={true}
+          magnifierSize={width < 480 ? "70%" : "50%"}
+          square={true}
+          style={{
+            zIndex: isOverlayDisplayed ? "-1" : "0",
+          }}
+        />
+      </MagnifierContainer>
+      {/* <img src="/venue.png" className="venue-map" /> */}
 
       <div className="venue-desc">
         <p>

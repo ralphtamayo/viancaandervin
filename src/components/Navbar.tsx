@@ -1,12 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
 import Hamburger from "hamburger-react";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 
 import "./Navbar.scss";
 
-function Navbar() {
+function Navbar({
+  isOverlayDisplayed,
+  setIsOverlayDisplayed,
+}: {
+  isOverlayDisplayed: boolean;
+  setIsOverlayDisplayed: any;
+}) {
   const { pathname: currentPath } = useLocation();
-  const [isOverlayDisplayed, setIsOverlayDisplayed] = useState(false);
 
   const isActive = useCallback(
     (path: string) => currentPath === path,
@@ -15,7 +20,7 @@ function Navbar() {
 
   const handleToggleOverlay = useCallback(
     () => setIsOverlayDisplayed(!isOverlayDisplayed),
-    [isOverlayDisplayed]
+    [isOverlayDisplayed, setIsOverlayDisplayed]
   );
 
   return (

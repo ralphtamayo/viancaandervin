@@ -17,10 +17,10 @@ body {
   color: $secondary-color;
   height: 100vh;
 
-  background-image: url("/bottom-flowers.png");
+  background-image: url("/bottom-flowers.png"), url("/flowers/flowers-01.png"), url("/flowers/flowers-02.png");
   background-repeat: no-repeat;
-  background-position: bottom -14em left;
-  background-size: 100%;
+  background-position: bottom -14em left, left -2em top, right -2em top;
+  background-size: 100%, 20%, 20%;
 }
 
 .primary-button {
@@ -57,76 +57,9 @@ body {
     max-width: 100%;
   }
 
-  &.flower1 {
-    width: 14%;
-    top: 18em;
-    left: 16em;
-    transform: rotate(10deg);
-  }
-
-  &.flower2 {
-    width: 9%;
-    left: -45px;
-    transform: rotate(25deg);
-  }
-
-  &.flower3 {
-    width: 14%;
-    right: 6em;
-    bottom: 15em;
-    transform: rotate(30deg);
-  }
-
-  &.flower4 {
-    width: 12%;
-    right: 15em;
-    top: 5em;
-    transform: rotate(30deg);
-  }
-
-  &.flower5 {
-    width: 16%;
-    bottom: 14em;
-    left: 6em;
-    transform: rotate(30deg);
-  }
-
   @media only screen and (max-width: 1180px) {
     &.top-flowers {
       top: -7em;
-    }
-
-    &.flower1 {
-      width: 25%;
-      top: 25em;
-      left: 5em;
-      transform: rotate(10deg);
-    }
-
-    &.flower2 {
-      left: -40px;
-      width: 15%;
-      top: 10em;
-    }
-
-    &.flower3 {
-      width: 20%;
-      bottom: 25em;
-      right: 0;
-      transform: rotate(0deg);
-    }
-
-    &.flower4 {
-      width: 18%;
-      right: 5em;
-      top: 14em;
-      transform: rotate(-30deg);
-    }
-
-    &.flower5 {
-      width: 25%;
-      bottom: 28em;
-      left: 0;
     }
   }
   
@@ -134,54 +67,19 @@ body {
     &.top-flowers {
       top: 0;
     }
-
-    &.flower1 {
-      left: 0;
-      top: 23em;
-      width: 30%;
-    }
-
-    &.flower2 {
-      left: -15px;
-      width: 15%;
-      top: 10em;
-    }
-
-    &.flower3 {
-      width: 25%;
-      bottom: 14em;
-      right: 0em;
-      transform: rotate(0deg);
-    }
-
-    &.flower4 {
-      width: 22%;
-      right: 1em;
-      top: 13em;
-      transform: rotate(-20deg);
-    }
-
-    &.flower5 {
-      width: 40%;
-      bottom: 15em;
-      left: -3em;
-    }
   }
 }
 
 @media only screen and (max-width: 1180px) {
   body {
-    background-position: bottom -1em left;
-    background-size: 200%;
+    background-image: url("/bottom-flowers.png"), url("/flowers/flowers-01-low.png"), url("/flowers/flowers-02-low.png");
+
+    background-position: bottom -1em left, left -2em top, right -2em top;
+    background-size: 200%, 35%, 35%;
+    background-position-x: 100%, -5%, 100%;
+    background-position-y: 105%, 140%, 80%;
   }
 }
-
-// @media only screen and (max-width: 480px) {
-//   body {
-//     background-position: bottom -1em left;
-//     background-size: 300%;
-//   }
-// }
 
 @media only screen and (min-width: 400px) {
   .container {
