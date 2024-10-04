@@ -19,6 +19,7 @@ body {
 
   background-image: url("/bottom-flowers.png"), url("/flowers/flowers-01.png"), url("/flowers/flowers-02.png");
   background-repeat: no-repeat;
+  background-attachment: scroll;
   background-position: bottom -14em left, left -2em top, right -2em top;
   background-size: 100%, 20%, 20%;
 }
