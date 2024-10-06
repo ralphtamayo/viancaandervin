@@ -10,20 +10,14 @@ import RegistryPage from "./pages/RegistryPage";
 import FaqPage from "./pages/FaqsPage";
 import OrderOfTheDayPage from "./pages/OrderOfTheDayPage";
 import { useState } from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [isOverlayDisplayed, setIsOverlayDisplayed] = useState(false);
 
   return (
-    <>
-      {/* <img src="/flowers/flowers-01.png" className="flowers flower1" />
-      <img src="/flowers/flowers-02.png" className="flowers flower2" /> */}
-      {/* <img src="/flowers/1.png" className="flowers flower1" />
-      <img src="/flowers/2.png" className="flowers flower2" />
-      <img src="/flowers/3.png" className="flowers flower3" />
-      <img src="/flowers/4.png" className="flowers flower4" />
-      <img src="/flowers/5.png" className="flowers flower5" /> */}
-      {/* <img src="/flowers/6.png" className="flowers flower6" /> */}
+    <div className="app-container">
+      <ScrollToTop />
       <div className="container">
         <img src="/top-flowers.png" className="flowers top-flowers" />
         <div className="row">
@@ -53,7 +47,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

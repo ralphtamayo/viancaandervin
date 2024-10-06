@@ -16,11 +16,17 @@ body {
   font-size: 1.8em;
   color: $secondary-color;
   height: 100vh;
+}
+
+.app-container {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
 
   background-image: url("/bottom-flowers.png"), url("/flowers/flowers-01.png"), url("/flowers/flowers-02.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: bottom -14em left, left -2em top, right -2em top;
+  background-position: bottom -10vh left, left -2em top, right -2em top;
   background-size: 100%, 20%, 20%;
 }
 
@@ -40,7 +46,7 @@ body {
 .flowers {
   display: block;
   position: absolute;
-  z-index: -999;
+  z-index: -1;
 
   &.top-flowers {
     margin: auto;
@@ -72,10 +78,10 @@ body {
 }
 
 @media only screen and (max-width: 1180px) {
-  body {
+  .app-container {
     background-image: url("/bottom-flowers.png"), url("/flowers/flowers-01-low.png"), url("/flowers/flowers-02-low.png");
 
-    background-position: bottom -1em left, left -2em top, right -2em top;
+    background-position: bottom -2vh left, left -2em top, right -2em top;
     background-size: 200%, 35%, 35%;
     background-position-x: 100%, -5%, 100%;
     background-position-y: 105%, 140%, 80%;

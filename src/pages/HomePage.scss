@@ -10,14 +10,14 @@
 }
 
 @media only screen and (max-width: 1180px) {
-  body {
+  .app-container {
     background-position-x: 100%, -5%, 103%;
     background-position-y: 105%, 100%, 90%;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  body {
+  .app-container {
     background-position-y: 105%, 85%, 38%;
   }
 
