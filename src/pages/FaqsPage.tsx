@@ -218,7 +218,7 @@ function FaqsPage() {
                 Will there be an open bar?
               </div>
             </AccordionHeader>
-            <AccordionPanel expandIconPosition="end">
+            <AccordionPanel>
               Yes, the drinks are on us, please party accordingly.
             </AccordionPanel>
           </AccordionItem>
