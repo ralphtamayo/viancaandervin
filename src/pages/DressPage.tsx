@@ -1,6 +1,10 @@
+import { GlassMagnifier, MagnifierContainer } from "react-image-magnifiers";
 import "./DressPage.scss";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
-function DressPage() {
+function DressPage({ isOverlayDisplayed }: { isOverlayDisplayed: boolean }) {
+  const { width } = useWindowDimensions();
+
   return (
     <div className="dress-container">
       <div className="dress-desc">
@@ -10,21 +14,36 @@ function DressPage() {
         </p>
         <strong>LADIES: </strong>
         <p>
-          Ladies you can wear midi or floor length dresses. Get inspired by
-          these beautiful sunset tones.
+          We invite you to draw inspiration from sunset hues—think warm oranges,
+          dusty pinks and golden yellows. Opt for luminous silks, floaty
+          chiffons, and other soft flowing textures. Or reach for joyful prints,
+          romantic ruffles and shimmering details for an elevated statement.
         </p>
+        <p>
+          As our venue features grassy areas, we kindly request that you avoid
+          stilettos. Instead, opt for sturdy block heels, wedges or consider
+          using heel stoppers for added stability and comfort.
+        </p>
+        <p>We can't wait to celebrate this special day with you in style!</p>
         <strong>GENTLEMEN: </strong>
         <p>
-          Gents - we may be fans of variety but there's absolutely nothing like
-          seeing a group of groomsmen in that classic tux.
-        </p>
-        <p>
-          We can't wait to capture everlasting moments with you in your fabulous
-          outfits.
+          We may be fans of variety but there's absolutely nothing like seeing a
+          group of men in that classic tux.
         </p>
       </div>
       <img src="/dress-color.png" className="dress-color" />
-      <img src="/dress.png" className="dress-code" />
+      <MagnifierContainer autoInPlace={true}>
+        <GlassMagnifier
+          className="input-position dress-code"
+          imageSrc="/dress.png"
+          allowOverflow={true}
+          magnifierSize={width < 480 ? "70%" : "50%"}
+          square={true}
+          style={{
+            zIndex: isOverlayDisplayed ? "-1" : "0",
+          }}
+        />
+      </MagnifierContainer>
     </div>
   );
 }

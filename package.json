@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fluentui/react-accordion": "^9.5.12",
     "@reduxjs/toolkit": "^2.2.7",
     "flipdown": "^0.3.2",
     "hamburger-react": "^2.5.1",

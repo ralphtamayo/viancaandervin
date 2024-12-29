@@ -37,7 +37,10 @@ function App() {
                 element={<VenuePage isOverlayDisplayed={isOverlayDisplayed} />}
               />
               <Route path="rsvp" element={<RsvpPage />} />
-              <Route path="dress" element={<DressPage />} />
+              <Route
+                path="dress"
+                element={<DressPage isOverlayDisplayed={isOverlayDisplayed} />}
+              />
               <Route path="order" element={<OrderOfTheDayPage />} />
               <Route path="registry" element={<RegistryPage />} />
               <Route path="faq" element={<FaqPage />} />

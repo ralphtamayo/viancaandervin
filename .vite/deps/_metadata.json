@@ -1,40 +1,88 @@
 {
-  "hash": "97be10be",
+  "hash": "cbc9a945",
   "configHash": "9da631a0",
-  "lockfileHash": "376ca19e",
-  "browserHash": "76e318c9",
+  "lockfileHash": "24dcfd94",
+  "browserHash": "67075367",
   "optimized": {
-    "react": {
-      "src": "../../node_modules/react/index.js",
-      "file": "react.js",
-      "fileHash": "898276ad",
-      "needsInterop": true
-    },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "d78ea133",
+      "fileHash": "7e52311a",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "156abc42",
+      "fileHash": "8d2520f4",
       "needsInterop": false
+    },
+    "react-redux": {
+      "src": "../../node_modules/react-redux/dist/react-redux.mjs",
+      "file": "react-redux.js",
+      "fileHash": "561b202a",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "24594c11",
+      "needsInterop": true
+    },
+    "@reduxjs/toolkit": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs",
+      "file": "@reduxjs_toolkit.js",
+      "fileHash": "2a3a9dc4",
+      "needsInterop": false
+    },
+    "@reduxjs/toolkit/query/react": {
+      "src": "../../node_modules/@reduxjs/toolkit/dist/query/react/rtk-query-react.modern.mjs",
+      "file": "@reduxjs_toolkit_query_react.js",
+      "fileHash": "5998ac43",
+      "needsInterop": false
+    },
+    "flipdown": {
+      "src": "../../node_modules/flipdown/src/flipdown.js",
+      "file": "flipdown.js",
+      "fileHash": "b6a9ead6",
+      "needsInterop": true
+    },
+    "react-image-magnifiers": {
+      "src": "../../node_modules/react-image-magnifiers/dist/index.js",
+      "file": "react-image-magnifiers.js",
+      "fileHash": "cf4872e5",
+      "needsInterop": true
+    },
+    "react-modal": {
+      "src": "../../node_modules/react-modal/lib/index.js",
+      "file": "react-modal.js",
+      "fileHash": "6fdd552a",
+      "needsInterop": true
     },
     "hamburger-react": {
       "src": "../../node_modules/hamburger-react/dist-esm/index.js",
       "file": "hamburger-react.js",
-      "fileHash": "d9cf5e06",
+      "fileHash": "a29c1c4f",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-QPG7G3M7": {
-      "file": "chunk-QPG7G3M7.js"
+    "chunk-UHINIFCJ": {
+      "file": "chunk-UHINIFCJ.js"
     },
-    "chunk-UTEJFLXC": {
-      "file": "chunk-UTEJFLXC.js"
+    "chunk-J4KOQHYD": {
+      "file": "chunk-J4KOQHYD.js"
+    },
+    "chunk-UARGS4BJ": {
+      "file": "chunk-UARGS4BJ.js"
+    },
+    "chunk-JL2MEAST": {
+      "file": "chunk-JL2MEAST.js"
+    },
+    "chunk-W4EHDCLL": {
+      "file": "chunk-W4EHDCLL.js"
+    },
+    "chunk-EWTE5DHJ": {
+      "file": "chunk-EWTE5DHJ.js"
     }
   }
 }

@@ -1,10 +1,40 @@
-.main-container {
-  text-align: center;
+.faq-container {
   padding: 20px;
   margin-top: 200px;
 
-  .main-desc {
-    width: 100%;
-    margin: auto;
+  .faq-desc {
+    max-width: 100%;
+    margin-bottom: 24em;
+
+    .faq-accordion {
+      background-color: #E7E0D3;
+      border-radius: 20px;
+      padding: 40px;
+    }
+    
+    hr {
+      border-top: 1px solid #aaa499;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .faq-desc {
+      .fui-Accordion {
+        .long-title {
+          margin-top: 2.5em;
+        }
+
+        .long-title-panel {
+          margin-top: 2em;
+        }
+      }
+
+      .faq-accordion {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      margin-bottom: 10em;
+    }
   }
 }

@@ -1,9 +1,9 @@
 import {
-  require_prop_types
-} from "./chunk-JL2MEAST.js";
-import {
   require_react_dom
 } from "./chunk-UHINIFCJ.js";
+import {
+  require_prop_types
+} from "./chunk-JL2MEAST.js";
 import {
   require_react
 } from "./chunk-W4EHDCLL.js";

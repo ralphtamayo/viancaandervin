@@ -4,9 +4,10 @@ function OrderOfTheDayPage() {
   return (
     <div className="main-container">
       <div className="main-desc">
-        We'll post our Order of the Day here when we're finished building it.
-        Thank you in advance!
+        Welcome to our special day! Here's what to expect:
       </div>
+      <img src="/order-of-the-day.png" className="main-image" />
+      <div className="main-desc">Thank you for celebrating with us!</div>
     </div>
   );
 }

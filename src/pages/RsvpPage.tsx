@@ -65,14 +65,14 @@ function RsvpPage() {
           not be achievable for some. Please join us if you are able, but we
           will gladly accept your warm wishes from afar!
         </p>
-        <p>
+        {/* <p>
           For those celebrating with us in Umbria on our wedding day,
           accomodation on the 11th and 12th of June will be shouldered by the
           couple as our way of saying thank you for gracing us with your
           presence.
-        </p>
+        </p> */}
 
-        <strong>RSVP Deadline Date: October 25, 2024</strong>
+        <strong>RSVP Deadline Date: January 31, 2025</strong>
       </div>
       <div className="rsvp-form">
         {isLoading ? (
