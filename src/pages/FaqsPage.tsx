@@ -67,7 +67,7 @@ function FaqsPage() {
                 to settle in.
               </p>
               <p>
-                Don't forger to check local transportation schedules to ensure a
+                Don't forget to check local transportation schedules to ensure a
                 smooth journey.
               </p>
             </AccordionPanel>
