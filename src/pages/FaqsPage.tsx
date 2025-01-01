@@ -159,6 +159,43 @@ function FaqsPage() {
               </p>
             </AccordionPanel>
           </AccordionItem>
+          <hr />
+          <AccordionItem value="5">
+            <AccordionHeader expandIconPosition="end">
+              <div style={{ whiteSpace: "normal" }}>
+                What is the Jubilee and how should I consider it in my travel
+                plans?
+              </div>
+            </AccordionHeader>
+            <AccordionPanel>
+              <p className="long-title-panel">
+                The Jubilee is an extraordinary Catholic religious event that
+                draws millions of the faithful to Rome. Ever since the year of
+                1300, these pilgrims from all over the world perform a holy
+                pilgrimage to the Eternal City.
+              </p>
+              <p>
+                This is the only time pilgrims can witness the opening of the
+                Catholic “Holy Doors” that are only meant to be opened by the
+                Pope during this year.
+              </p>
+              <p>
+                Several such doors are located across Rome; the most sanctified
+                one is in St. Peter’s Basilica in Vatican City.
+              </p>
+              <p>
+                The holy pilgrimage to Rome signifies personal spiritual
+                renewal.
+              </p>
+              <p>
+                We encourage you to download the app "iubilaeum25", which is
+                available to download on all app stores. You can use this app to
+                register for activities, including your spot for the five Holy
+                Door pilgrimages. The app will give you a QR code to allow
+                entry.
+              </p>
+            </AccordionPanel>
+          </AccordionItem>
         </Accordion>
         <div
           style={{
