@@ -8,6 +8,7 @@ function RegistryPage() {
         However, if you’d like to contribute to our future together, a monetary
         gift would be appreciated.
       </div>
+      <img src="/bdo.jpg" className="bank-qr" />
     </div>
   );
 }
