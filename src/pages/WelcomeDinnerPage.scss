@@ -1,6 +1,9 @@
 .main-image {
   max-width: 100%;
   margin-top: 20px;
+  box-shadow: -1px 1px 26px -12px rgba(0,0,0,1);
+-webkit-box-shadow: -1px 1px 26px -12px rgba(0,0,0,1);
+-moz-box-shadow: -1px 1px 26px -12px rgba(0,0,0,1);
 }
 
 @media (max-width: 750px) {
