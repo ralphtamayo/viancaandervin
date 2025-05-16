@@ -27,7 +27,7 @@ function Navbar({
     <div className="navbar">
       <div className="navbar-large">
         <h1 className="header-text">We Do</h1>
-        <div className="navbar-links">
+        <div className="navbar-links" style={{ marginBottom: "10px" }}>
           <Link to="" className={isActive("/") ? "active" : ""}>
             Home
           </Link>
@@ -48,6 +48,17 @@ function Navbar({
           </Link>
           <Link to="faq" className={isActive("/faq") ? "active" : ""}>
             FAQs
+          </Link>
+        </div>
+        <div className="navbar-links">
+          <Link
+            to="transport"
+            className={isActive("/transport") ? "active" : ""}
+          >
+            Wedding Transport
+          </Link>
+          <Link to="attire" className={isActive("/attire") ? "active" : ""}>
+            Welcome Dinner Attire
           </Link>
         </div>
       </div>
@@ -112,6 +123,20 @@ function Navbar({
               onClick={handleToggleOverlay}
             >
               FAQs
+            </Link>
+            <Link
+              to="transport"
+              className={isActive("/transport") ? "active" : ""}
+              onClick={handleToggleOverlay}
+            >
+              Wedding Transport
+            </Link>
+            <Link
+              to="attire"
+              className={isActive("/attire") ? "active" : ""}
+              onClick={handleToggleOverlay}
+            >
+              Welcome Dinner Attire
             </Link>
           </div>
         </div>

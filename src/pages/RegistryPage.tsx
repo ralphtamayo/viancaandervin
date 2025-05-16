@@ -9,6 +9,7 @@ function RegistryPage() {
         gift would be appreciated.
       </div>
       <img src="/bdo.jpg" className="bank-qr" />
+      <img src="/westpac.png" className="bank-qr" />
     </div>
   );
 }

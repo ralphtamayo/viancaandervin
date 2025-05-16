@@ -11,6 +11,8 @@ import FaqPage from "./pages/FaqsPage";
 import OrderOfTheDayPage from "./pages/OrderOfTheDayPage";
 import { useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
+import WeddingTransportPage from "./pages/WeddingTransportPage";
+import WelcomeDinnerPage from "./pages/WelcomeDinnerPage";
 
 function App() {
   const [isOverlayDisplayed, setIsOverlayDisplayed] = useState(false);
@@ -44,6 +46,8 @@ function App() {
               <Route path="order" element={<OrderOfTheDayPage />} />
               <Route path="registry" element={<RegistryPage />} />
               <Route path="faq" element={<FaqPage />} />
+              <Route path="transport" element={<WeddingTransportPage />} />
+              <Route path="attire" element={<WelcomeDinnerPage />} />
             </Routes>
 
             <Outlet />
