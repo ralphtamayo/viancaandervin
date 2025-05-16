@@ -1,9 +1,13 @@
-.dinner-container {
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+.main-image {
+  max-width: 100%;
+  margin-top: 20px;
+}
 
-  .dinner-desc {
-    margin: auto;
+@media (max-width: 750px) {
+  .first-image {
+    margin-top: 100px;
+  }
+  .second-image {
+    margin-top: 40px;
   }
 }

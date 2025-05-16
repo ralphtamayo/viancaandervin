@@ -1,18 +1,18 @@
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import "./WelcomeDinnerPage.scss";
-import "react-image-gallery/styles/css/image-gallery.css";
-
-import ImageGallery from "react-image-gallery";
-import { useState } from "react";
 
 function WelcomeDinnerPage() {
-  const [images] = useState([
-    { original: "/dinner-cover.jpeg" },
-    { original: "/dinner-attire.jpeg" },
-  ]);
+  const { width } = useWindowDimensions();
+
   return (
-    <div className="dinner-container">
-      <div className="dinner-desc">
-        <ImageGallery items={images} />
+    <div className="container">
+      <div className="row">
+        <div className={width <= 1024 ? "twelve columns" : "six columns"}>
+          <img src="/dinner-cover.jpeg" className="main-image first-image" />
+        </div>
+        <div className={width <= 1024 ? "twelve columns" : "six columns"}>
+          <img src="/dinner-attire.jpeg" className="main-image second-image" />
+        </div>
       </div>
     </div>
   );
